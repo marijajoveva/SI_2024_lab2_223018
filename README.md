@@ -22,11 +22,15 @@ Control Flow Graph
 
 Тест случаи според Multiple Condition критериумот
 
-if (item.getPrice) > 300 88 item.getDiscount) > 0 88 item.getBarcode.charAt(0) == 0')
+if (item.getPrice) > 300 && item.getDiscount() > 0 && item.getBarcode.charAt(0) == '0')
+
 Можни услови:
-F B& X B& X -> item.getPrice) < =300, item.getDiscount) = anything, item.getBarcode.charAt0)=anything
-T 88F 8& X -›item.getPrice) > =300, item.getDiscount <=0, item.getBarcode.chatAt(0)= anything
-T 88 T 88 T → item.getPrice > = 300, item.getDiscount > 0, item.getBarcode0.charAt(0) == "0*
+
+F && X && X -> item.getPrice() <= 300, item.getDiscount() = anything, item.getBarcode.charAt0)=anything
+
+T && F && X -> item.getPrice() >= 300, item.getDiscount() <=0, item.getBarcode().chatAt(0)= anything
+
+T && T && T → item.getPrice() >= 300, item.getDiscount() > 0, item.getBarcode0.charAt(0) == '0'
 
 
 
