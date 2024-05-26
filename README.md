@@ -26,11 +26,11 @@ if (item.getPrice) > 300 && item.getDiscount() > 0 && item.getBarcode.charAt(0) 
 
 Можни услови:
 
-F && X && X -> item.getPrice() <= 300, item.getDiscount() = anything, item.getBarcode.charAt0)=anything
+F && X && X -> item.getPrice() <= 300, item.getDiscount() = anything, item.getBarcode.charAt(0) = anything
 
-T && F && X -> item.getPrice() >= 300, item.getDiscount() <=0, item.getBarcode().chatAt(0)= anything
+T && F && X -> item.getPrice() >= 300, item.getDiscount() <=0, item.getBarcode().charAt(0) = anything
 
-T && T && T → item.getPrice() >= 300, item.getDiscount() > 0, item.getBarcode0.charAt(0) == '0'
+T && T && T -> item.getPrice() >= 300, item.getDiscount() > 0, item.getBarcode().charAt(0) == '0'
 
 
 
